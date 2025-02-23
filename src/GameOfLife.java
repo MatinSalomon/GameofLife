@@ -2,9 +2,8 @@ import java.util.Random;
 
 public class GameOfLife {
     public static void main(String[] args) {
-        Integer width = null, height = null, generations = null, speed = 300;
+        int width = 0, height = 0, generations = 0, speed = 300, neighborhood = 3;
         String pattern = null;
-        int neighborhood = 3;
 
         for (String arg : args) {
             String[] param = arg.split("=");
@@ -19,7 +18,7 @@ public class GameOfLife {
             }
         }
 
-        if (width == null || height == null || generations == null || pattern == null) {
+        if (width == 0 || height == 0 || generations == 0 || pattern == null) {
             System.out.println("Error: Debes proporcionar todos los parámetros requeridos.");
             return;
         }
